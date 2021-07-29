@@ -6,7 +6,7 @@ from . import views
 app_name = 'places'
 urlpatterns = [
     path('', views.show_main, name='index'),
-    # path('question/<int:id>/', views.QuestionView, name='question'),
+    path('places/<int:id>/', views.place_view, name='places'),
     # path('login/', views.LoginView, name='login'),
     # re_path(r'^login\/.*$', views.test),
     # path('signup/', views.SignupView, name='signup'),
