@@ -20,8 +20,9 @@ def show_main(request):
                                       },
                                       "properties": {
                                           "title": place.title,
-                                          "placeId": place.placeId,
-                                          "detailsUrl": "./static/places/" + place.placeId + ".json"
+                                          # "placeId": place.placeId,
+                                          # "detailsUrl": "./static/places/" + place.placeId + ".json"
+                                          "detailsUrl": "./places/" + str(place.id)
                                       }
                                       })
 
