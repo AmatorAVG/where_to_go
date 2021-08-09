@@ -1,6 +1,6 @@
 # Site about the most interesting places in Moscow. 
 
-![&#x41A;&#x443;&#x434;&#x430; &#x43F;&#x43E;&#x439;&#x442;&#x438;](.gitbook/assets/site.png)
+![Alt text](screen.png?raw=true "Screen example")
 
 The code is written for educational purposes - this is a lesson in the Python and web development course on the site [Devman Django course](https://dvmn.org/modules/django/).  
 
