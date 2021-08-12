@@ -30,7 +30,8 @@ env.read_env()
 # Override in .env for local development
 DEBUG = env.bool("DEBUG", default=False)
 # SECRET_KEY is required
-SECRET_KEY = env.str("SECRET_KEY")
+# SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY='8hlc8-d)88@l5@prcy+hv6s9j3mvgd10z$iirqxjjtm%*7in_v'
 
 # Parse email URLs, e.g. "smtp://"
 email = env.dj_email_url("EMAIL_URL", default="smtp://")
