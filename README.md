@@ -1,6 +1,6 @@
 # Site about the most interesting places in Moscow. 
 
-![Alt text](screen.png?raw=true "Screen example")
+![Alt text](where_to_go/screen.png?raw=true "Screen example")
 
 The code is written for educational purposes - this is a lesson in the Python and web development course on the site [Devman Django course](https://dvmn.org/modules/django/).  
 
