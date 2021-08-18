@@ -30,8 +30,7 @@ env.read_env()
 # Override in .env for local development
 DEBUG = env.bool("DEBUG", default=False)
 # SECRET_KEY is required
-# SECRET_KEY = env.str("SECRET_KEY")
-SECRET_KEY='8hlc8-d)88@l5@prcy+hv6s9j3mvgd10z$iirqxjjtm%*7in_v'
+SECRET_KEY = env.str("SECRET_KEY")
 
 # Parse email URLs, e.g. "smtp://"
 email = env.dj_email_url("EMAIL_URL", default="smtp://")
@@ -41,7 +40,7 @@ EMAIL_HOST_PASSWORD = email["EMAIL_HOST_PASSWORD"]
 EMAIL_HOST_USER = email["EMAIL_HOST_USER"]
 EMAIL_USE_TLS = email["EMAIL_USE_TLS"]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mywebsite.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'amatoravg.pythonanywhere.com']
 SECURE_HSTS_SECONDS = env.int("SECURE_HSTS_SECONDS", default=30)
 SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool("SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True)
 SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=False)

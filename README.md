@@ -6,14 +6,14 @@ The code is written for educational purposes - this is a lesson in the Python an
 
 All requirements are listed in the file: `requirements.txt`.
 
-Link on website: https://wtg.pythonanywhere.com/.
+Link on website: https://amatoravg.pythonanywhere.com/.
 
-Link on admin site: https://wtg.pythonanywhere.com/admin/.
+Link on admin site: https://amatoravg.pythonanywhere.com/admin/.
 
 ### For testing:
-login: amator.
+login: admin.
 
-password: 123.
+password: devmanwhere1.
 
 ### Installing project
 
