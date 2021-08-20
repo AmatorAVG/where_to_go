@@ -37,6 +37,15 @@ Run the project:
 ```
 Open in browser: http://localhost:8000.
 
+### Loading data from json
+
+For loading data use command load_place:
+
+```shell script
+python manage.py load_place https://raw.githubusercontent.com/devmanorg/where-to-go-places/master/places/%D0%90%D0%BD%D1%82%D0%B8%D0%BA%D0%B0%D1%84%D0%B5%20Bizone.json
+```
+For loading data from several files, links must be separated by a space.
+
 ## Libraries used
 
 * [Leaflet](https://leafletjs.com/) — map rendering
