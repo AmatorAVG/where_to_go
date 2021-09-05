@@ -9,7 +9,6 @@ class Place(models.Model):
     coordinates_lng = models.FloatField(default=0.00, verbose_name='Долгота')
     coordinates_lat = models.FloatField(default=0.00, verbose_name='Широта')
 
-
     def __str__(self):
         return self.title
 
