@@ -16,10 +16,10 @@ class Command(BaseCommand):
             r.raise_for_status()
             json_file = r.json()
             place, created = Place.objects.get_or_create(title=json_file['title'],
-                                                             description_short=json_file['description_short'],
-                                                             description_long=json_file['description_long'],
-                                                             coordinates_lng=json_file['coordinates']['lng'],
-                                                             coordinates_lat=json_file['coordinates']['lat'])
+                                                         defaults={'description_short': json_file['description_short'],
+                                                                   'description_long': json_file['description_long'],
+                                                                   'coordinates_lng': json_file['coordinates']['lng'],
+                                                                   'coordinates_lat': json_file['coordinates']['lat']})
             for img_url in json_file['imgs']:
                 name = urlparse(img_url).path.split('/')[-1]
                 requests.get(img_url).raise_for_status()
