@@ -8,10 +8,10 @@ from places.models import Place, Image
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
-        parser.add_argument('link', nargs='+', type=str)
+        parser.add_argument('links', nargs='+', type=str)
 
     def handle(self, *args, **options):
-        for link in options['link']:
+        for link in options['links']:
             r = requests.get(link)
             r.raise_for_status()
             json_file = r.json()
