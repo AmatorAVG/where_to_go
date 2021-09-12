@@ -14,13 +14,13 @@ class Command(BaseCommand):
         for link in options['links']:
             r = requests.get(link)
             r.raise_for_status()
-            json_file = r.json()
-            place, created = Place.objects.get_or_create(title=json_file['title'],
-                                                         defaults={'description_short': json_file['description_short'],
-                                                                   'description_long': json_file['description_long'],
-                                                                   'coordinates_lng': json_file['coordinates']['lng'],
-                                                                   'coordinates_lat': json_file['coordinates']['lat']})
-            for img_url in json_file['imgs']:
+            geo_json_dict = r.json()
+            place, created = Place.objects.get_or_create(title=geo_json_dict['title'],
+                                                         defaults={'description_short': geo_json_dict['description_short'],
+                                                                   'description_long': geo_json_dict['description_long'],
+                                                                   'coordinates_lng': geo_json_dict['coordinates']['lng'],
+                                                                   'coordinates_lat': geo_json_dict['coordinates']['lat']})
+            for img_url in geo_json_dict['imgs']:
                 name = urlparse(img_url).path.split('/')[-1]
                 requests.get(img_url).raise_for_status()
                 content = ContentFile(requests.get(img_url).content)
