@@ -7,13 +7,13 @@ from places.models import Place
 def show_main(request):
     places = Place.objects.all()
 
-    data_json = {
+    geo_json = {
       "type": "FeatureCollection",
       "features": []
     }
 
     for place in places:
-        data_json["features"].append({"type": "Feature",
+        geo_json["features"].append({"type": "Feature",
                                       "geometry": {
                                           "type": "Point",
                                           "coordinates": [place.coordinates_lng, place.coordinates_lat]
@@ -24,7 +24,7 @@ def show_main(request):
                                       }
                                       })
 
-    return render(request, 'places/index.html', context={"value": data_json})
+    return render(request, 'places/index.html', context={"geo_json": geo_json})
 
 
 def place_view(request, id):
