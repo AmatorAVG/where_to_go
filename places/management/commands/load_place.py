@@ -22,8 +22,9 @@ class Command(BaseCommand):
                                                                    'coordinates_lat': geo_json_dict['coordinates']['lat']})
             for img_url in geo_json_dict['imgs']:
                 name = urlparse(img_url).path.split('/')[-1]
-                requests.get(img_url).raise_for_status()
-                content = ContentFile(requests.get(img_url).content)
+                resp_img = requests.get(img_url)
+                resp_img.raise_for_status()
+                content = ContentFile(resp_img.content)
                 new_img = Image(place=place)
                 new_img.img.save(name, content, save=True)
                 new_img.save()
