@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from places.models import Place
+from django.urls import reverse
 
 
 def show_main(request):
@@ -20,7 +21,7 @@ def show_main(request):
                                       },
                                       "properties": {
                                           "title": place.title,
-                                          "detailsUrl": "./places/" + str(place.id)
+                                          "detailsUrl": reverse('places:places_show', args=[place.id]),
                                       }
                                       })
 
