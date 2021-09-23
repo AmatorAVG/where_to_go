@@ -28,9 +28,9 @@ def show_main(request):
     return render(request, 'places/index.html', context={"geo_json": geo_json})
 
 
-def place_view(request, id):
+def place_view(request, place_id):
 
-    place = get_object_or_404(Place, pk=id)
+    place = get_object_or_404(Place, pk=place_id)
 
     data_json = {
         "title": place.title,
