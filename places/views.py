@@ -34,7 +34,7 @@ def place_view(request, place_id):
 
     data_json = {
         "title": place.title,
-        "imgs": [img_obj.img.url for img_obj in place.place_images.all()],
+        "imgs": [img_obj.img.url for img_obj in place.images.all()],
         "description_short": place.description_short,
         "description_long": place.description_long,
         "coordinates": {
